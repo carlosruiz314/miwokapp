@@ -23,7 +23,6 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter, it is not going to use this second argument
-        //
         super(context, 0, objects);
     }
 
@@ -37,6 +36,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
         ((TextView) convertView.findViewById(R.id.miwok_text_view)).setText(getItem(position).getMiwokTranslation());
         ((TextView) convertView.findViewById(R.id.default_text_view)).setText(getItem(position).getDefaultTranslation());
+        // Return the whole list item layout
         return convertView;
     }
 }
